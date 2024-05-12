@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/formik/static/js/main.d4a0cd3b.js",
+    "index.html": "/formik/index.html",
+    "main.d4a0cd3b.js.map": "/formik/static/js/main.d4a0cd3b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d4a0cd3b.js"
+  ]
+}
