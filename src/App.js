@@ -6,6 +6,7 @@ function App() {
     initialValues: {
       email: "",
       password: "",
+      organization: "", // Adding organization field
     },
     onSubmit: (values) => {
       alert("Login Successful");
@@ -14,12 +15,14 @@ function App() {
       let errors = {};
       if (!values.email) errors.email = "field required";
       if (!values.password) errors.password = "field required";
+      if (!values.organization) errors.organization = "Field required"; // Validation for organization
       return errors;
     },
   });
 
   return (
     <div>
+       <h1>Registration Form</h1> {/*Form */}
       <form onSubmit={formik.handleSubmit}>
         <div>Email:</div>
         <input
@@ -43,6 +46,14 @@ function App() {
           value={formik.values.password}
         />
         <br />
+        <div>Organization:</div> {/* Label for organization input */}
+        <input
+          id="orgField"
+          type="text"
+          name="organization"
+          onChange={formik.handleChange}
+          value={formik.values.organization}
+        />
         {formik.errors.password ? (
           <div id="pswError" style={{ color: "red" }}>
             {formik.errors.password}
